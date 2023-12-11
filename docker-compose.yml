@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  backend:
+    build: ./api
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgresql://Thanush19:gVCkpIl67TJm@ep-shiny-fire-69396007-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+
+  frontend:
+    build: ./client
+    ports:
+      - "5173:3000"
